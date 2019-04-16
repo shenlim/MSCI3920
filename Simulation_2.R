@@ -28,12 +28,12 @@ average <- function(weight) {
 average(0.7)
 
 # Plot demand
-ggplot(data = melt(demand_cal, id.vars = 'day')) +
+plot_cal <- ggplot(data = melt(demand_cal, id.vars = 'day')) +
   geom_line(aes(x = day, y = value)) +
   facet_wrap(~variable) +
   ylab('demand')
 
-ggplot(data = melt(demand_oth, id.vars = 'day')) +
+plot_oth <- ggplot(data = melt(demand_oth, id.vars = 'day')) +
   geom_line(aes(x = day, y = value)) +
   facet_wrap(~variable) +
   ylab('demand')
